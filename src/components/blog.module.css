@@ -1,0 +1,11 @@
+.title {
+  color: #0000ff;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.blog h2 {
+  text-transform: capitalize;
+}
+/* css modules */
+/* class names and animations */

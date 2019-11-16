@@ -1,0 +1,7 @@
+// 这种方式是sass的嵌套， 可以在子类下输入样式
+.navbar {
+  background: blue;
+  h2 {
+    color: white;
+  }
+}
