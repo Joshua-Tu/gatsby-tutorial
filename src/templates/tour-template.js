@@ -19,7 +19,7 @@ const TourTemplate = ({ data }) => {
     journey,
   } = data.tour;
 
-  console.log(images);
+  // console.log(images);
 
   return (
     <Layout>
@@ -30,6 +30,27 @@ const TourTemplate = ({ data }) => {
               return <Image key={index} fluid={item.fluid} alt={name} className={styles.image} />;
             })}
           </div>
+          <h2>{name}</h2>
+          <div className={styles.info}>
+            <p>
+              <FaMoneyBillWave className={styles.icon} />
+              starting from ${price}
+            </p>
+            <p>
+              <FaMap className={styles.icon} />
+              {country}
+            </p>
+          </div>
+          <h4>start on : {start}</h4>
+          <h4>duration: {days} days</h4>
+          <p className={styles.desc}>{description}</p>
+          <h2>daily schedule</h2>
+          <ul className={styles.journey}>
+            {journey.map((item, index) => {
+              return <li key={index}>{item.day}</li>;
+            })}
+          </ul>
+          <Link to="/tours">Back to tours</Link>
         </div>
       </section>
     </Layout>
